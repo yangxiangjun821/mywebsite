@@ -1,14 +1,14 @@
-# My Photography Projects
+# Vanishing Wild
 
 Open index.html with VS Code Live Server so the shared navigation and footer can load through fetch.
 
 ## Coursework
 
-project.html contains five ideas, their audiences, and the favourite's four-page plan. machine.html is the useless-machine exercise. poster.html is a 1200 × 630 poster sketch.
+The site introduces endangered animals, their habitats, and conservation pressures. project.html contains an interactive animal field guide plus five project ideas and their audiences. machine.html is the habitat-themed useless-machine exercise. poster.html is a 1200 × 630 poster sketch.
 
 ## Explain the machine
 
-The loop is ready → captured → forgetting → ready. One native button supports mouse, touch, Enter, and Space. The state guard ignores presses during a cycle, preventing overlapping timers. The photograph appears immediately, disappears after 1400 milliseconds, and the original state returns after another 1200 milliseconds. Nothing is saved or scored. Reduced-motion preferences remove the fade.
+The loop is present → vanishing → returning → present. One native button supports mouse, touch, Enter, and Space. The state guard ignores presses during a cycle, preventing overlapping timers. The habitat fades, the machine refuses the loss, and the original state returns. Nothing is saved or scored. Reduced-motion preferences remove the fade.
 
 machine.js comments explain the code. data-state connects state to CSS. aria-disabled communicates that the button is busy without removing keyboard focus. role=status announces messages.
 

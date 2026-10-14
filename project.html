@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Five photography website ideas and the people each idea could help.">
-    <title>My Photography Project Ideas</title>
+    <meta name="description" content="A beginner-friendly field guide to endangered animals, their habitats, and the threats they face.">
+    <title>Animal Field Guide · Vanishing Wild</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="favicon-32.png" sizes="32x32">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -13,63 +13,44 @@
     <header id="site-header"></header>
 
     <main>
-        <section class="project-idea" aria-labelledby="project-idea-title">
-            <p class="project-idea__label">My project idea</p>
-            <h1 id="project-idea-title">Frame &amp; Feeling</h1>
-            <p class="project-idea__intro">A calm digital photography journal that connects each image with the story, mood, and small details behind it.</p>
-            <a class="project-idea__link" href="about.html#contact">Talk about the idea <span aria-hidden="true">→</span></a>
+        <section class="page-intro" aria-labelledby="guide-title">
+            <h1 id="guide-title">Animals at the edge</h1>
+            <p>Six short profiles connect each animal to the habitat, pressures, and protection work surrounding it.</p>
         </section>
 
-        <h2>What I want to build</h2>
-        <p>Frame &amp; Feeling will help photographers slow down and remember more than just the final image. Each entry will combine a photograph with its location, camera settings, weather, and a short reflection.</p>
+        <section aria-labelledby="profiles-title">
+            <div class="section-heading">
+                <div><h2 id="profiles-title">Field guide</h2><p>Choose a habitat to narrow the collection.</p></div>
+                <div class="filters" role="group" aria-label="Filter animals by habitat">
+                    <button class="filter is-active" type="button" data-filter="all" aria-pressed="true">All</button>
+                    <button class="filter" type="button" data-filter="forest" aria-pressed="false">Forest</button>
+                    <button class="filter" type="button" data-filter="ocean" aria-pressed="false">Ocean</button>
+                    <button class="filter" type="button" data-filter="mountain" aria-pressed="false">Mountain</button>
+                </div>
+            </div>
 
-        <div class="idea-features">
-            <article><h3>Capture the context</h3><p>Save the lens, aperture, shutter speed, and light conditions alongside every photograph.</p></article>
-            <article><h3>Keep the feeling</h3><p>Add a mood, colour, or memory so the image keeps its emotional meaning over time.</p></article>
-            <article><h3>Notice patterns</h3><p>Browse entries by season, place, or mood to discover how my photography changes.</p></article>
-        </div>
+            <div class="animal-list" id="animal-list">
+                <article class="animal-profile" data-habitat="forest"><p class="status status--endangered">Endangered</p><h3>Asian elephant</h3><p class="animal-profile__range">South and Southeast Asian forests</p><p>Forest fragmentation separates herds from food, water, and traditional migration routes.</p><p><strong>Protection focus:</strong> connected habitats and safer coexistence with nearby communities.</p></article>
+                <article class="animal-profile" data-habitat="ocean"><p class="status status--critical">Critically endangered</p><h3>Hawksbill turtle</h3><p class="animal-profile__range">Tropical coral reefs</p><p>Illegal shell trade, accidental capture, and reef loss continue to threaten this marine reptile.</p><p><strong>Protection focus:</strong> safer fishing, protected nesting beaches, and healthy reefs.</p></article>
+                <article class="animal-profile" data-habitat="forest"><p class="status status--critical">Critically endangered</p><h3>Sunda pangolin</h3><p class="animal-profile__range">Southeast Asian forests</p><p>This solitary, scale-covered mammal is heavily threatened by illegal wildlife trafficking.</p><p><strong>Protection focus:</strong> stopping trafficking and protecting forest habitat.</p></article>
+                <article class="animal-profile" data-habitat="forest"><p class="status status--critical">Critically endangered</p><h3>Amur leopard</h3><p class="animal-profile__range">Temperate forests of Northeast Asia</p><p>A small wild population depends on enough connected forest and healthy prey.</p><p><strong>Protection focus:</strong> anti-poaching work, prey recovery, and habitat corridors.</p></article>
+                <article class="animal-profile" data-habitat="mountain"><p class="status status--vulnerable">Vulnerable</p><h3>Snow leopard</h3><p class="animal-profile__range">High mountains of Central and South Asia</p><p>Prey loss and conflict with livestock owners put pressure on this wide-ranging cat.</p><p><strong>Protection focus:</strong> community-led conservation and secure mountain habitat.</p></article>
+                <article class="animal-profile" data-habitat="forest"><p class="status status--endangered">Endangered</p><h3>Mountain gorilla</h3><p class="animal-profile__range">Montane forests of Central Africa</p><p>Its limited range makes habitat protection, disease prevention, and careful tourism essential.</p><p><strong>Protection focus:</strong> protected forests and long-term cooperation with local communities.</p></article>
+            </div>
+            <p class="filter-status" id="filter-status" role="status">Showing all six animals.</p>
+        </section>
 
-        <h2>Five ideas I might build</h2>
-        <ul>
-            <li>Frame &amp; Feeling</li>
-            <li>Photo Filter Lab</li>
-            <li>Exposure Log Book</li>
-            <li>Portrait Assistant</li>
-            <li>Film Stock Finder</li>
-        </ul>
-
-        <h2>Who each idea is for</h2>
-        <dl class="project-details">
-            <dt>Frame &amp; Feeling</dt>
-            <dd>For beginner photographers who want to preserve the stories and feelings behind their photographs.</dd>
-
-            <dt>Photo Filter Lab</dt>
-            <dd>For beginners who want to compare colour and contrast effects.</dd>
-
-            <dt>Exposure Log Book</dt>
-            <dd>For film photographers who need to record settings for every shot.</dd>
-
-            <dt>Portrait Assistant</dt>
-            <dd>For new portrait photographers planning poses and lighting.</dd>
-
-            <dt>Film Stock Finder</dt>
-            <dd>For photographers choosing a film stock for a particular look.</dd>
-        </dl>
-
-        <section aria-labelledby="favourite-title">
-            <h2 id="favourite-title">My favourite: Frame &amp; Feeling</h2>
-            <p>A photography journal for beginners to preserve the places, settings, and feelings behind their images.</p>
-            <p>The first version will be a four-page static website with entries authored in HTML. Accounts, uploads, and a database are outside the initial scope.</p>
-            <h3>The four planned pages</h3>
-            <ol>
-                <li><strong>Home — index.html:</strong> introduce the journal and highlight a photograph and its story.</li>
-                <li><strong>Gallery — gallery.html:</strong> present photographs with meaningful captions.</li>
-                <li><strong>Field Notes — notes.html:</strong> record locations, light, camera settings, and reflections.</li>
-                <li><strong>About &amp; Contact — about.html:</strong> explain the journal and provide contact details.</li>
-            </ol>
-            <p>These are page names for the future project, rather than links to unfinished coursework pages.</p>
-            <h3>The first poster</h3>
-            <p>A quiet plum-and-peach cover with a large title, a short description, and a viewfinder frame.</p>
+        <section class="coursework-plan" aria-labelledby="ideas-title">
+            <h2 id="ideas-title">Five project directions</h2>
+            <dl class="project-details">
+                <dt>Endangered Animal Field Guide</dt><dd>For students discovering threatened wildlife for the first time.</dd>
+                <dt>Wildlife Trade Explainer</dt><dd>For readers who want to understand how illegal trade affects species.</dd>
+                <dt>Habitat Corridor Map</dt><dd>For learners exploring why connected landscapes matter.</dd>
+                <dt>Responsible Wildlife Tourism Guide</dt><dd>For travellers who want to avoid harming animals.</dd>
+                <dt>Local Species Watch</dt><dd>For communities recording and protecting nearby wildlife.</dd>
+            </dl>
+            <h2>My favourite: Endangered Animal Field Guide</h2>
+            <p>Vanishing Wild is for students and curious readers. Its core pages are Home, Animals, Quotes, and About. The animal guide is the page that must work best, so filtering and clear profiles come first.</p>
             <p><a href="poster.html">View the 1200 × 630 poster sketch</a></p>
         </section>
     </main>
@@ -77,5 +58,6 @@
     <footer id="site-footer"></footer>
 
     <script src="nav.js"></script>
+    <script src="animals.js"></script>
 </body>
 </html>

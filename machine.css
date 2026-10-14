@@ -12,7 +12,7 @@
     position: relative;
     aspect-ratio: 3 / 2;
     overflow: hidden;
-    background: var(--primary-deep);
+    background: #263126;
     border-radius: 16px;
 }
 
@@ -24,8 +24,9 @@
     border: 0;
     border-radius: 0;
     box-shadow: none;
-    opacity: 0;
-    transition: opacity 450ms ease-out;
+    opacity: 1;
+    filter: saturate(1);
+    transition: opacity 650ms ease-out, filter 650ms ease-out;
 }
 
 .machine-empty {
@@ -33,17 +34,22 @@
     inset: 0;
     display: grid;
     place-items: center;
-    color: white;
+    color: #f0e6d2;
+    opacity: 0;
     transition: opacity 450ms ease-out;
 }
 
-.machine[data-state="captured"] .machine-photo {
+.machine[data-state="vanishing"] .machine-photo {
+    opacity: .08;
+    filter: saturate(0);
+}
+
+.machine[data-state="vanishing"] .machine-empty {
     opacity: 1;
 }
 
-.machine[data-state="captured"] .machine-empty,
-.machine[data-state="forgetting"] .machine-empty {
-    opacity: 0;
+.machine[data-state="returning"] .machine-photo {
+    opacity: 1;
 }
 
 #machine-status {
@@ -56,7 +62,7 @@
     color: white;
     background: var(--primary);
     border: 0;
-    border-radius: 999px;
+    border-radius: 8px;
     font: inherit;
     font-weight: 700;
     cursor: pointer;
