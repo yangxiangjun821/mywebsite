@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A small collection of favourite photography quotes and notes.">
+    <title>My Favourite Quotes</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon-32.png" sizes="32x32">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+</head>
+<body>
+    <header id="site-header"></header>
+
+    <main class="quotes-page">
+        <section class="quote-hero" aria-labelledby="quote-hero-title">
+            <div class="quote-hero__content">
+                <p class="quote-hero__label">A thought for this moment</p>
+                <h1 id="quote-hero-title">My Favourite Quotes</h1>
+                <blockquote class="quote-hero__quote" aria-live="polite">
+                    <p id="featured-quote"></p>
+                    <footer><cite id="featured-author"></cite></footer>
+                </blockquote>
+                <button class="quote-hero__button" id="next-quote" type="button">
+                    Show me another quote
+                </button>
+            </div>
+            <div class="quote-hero__mark" aria-hidden="true">“</div>
+        </section>
+
+        <div class="quotes-heading">
+            <h2>More words worth keeping</h2>
+            <p>A small collection of lines that keep me curious.</p>
+        </div>
+
+        <div class="quotes-grid">
+            <article class="quote quote--large">
+                <blockquote>
+                    <p>The world is full of magic things, patiently waiting for our wits to grow sharper.</p>
+                </blockquote>
+                <footer>
+                    <cite>Bertrand Russell</cite>
+                </footer>
+            </article>
+
+            <article class="quote quote--small">
+                <blockquote>
+                    <p>A camera is a save button for the eyes.</p>
+                </blockquote>
+                <footer>
+                    <cite>Personal note</cite>
+                </footer>
+            </article>
+
+            <article class="quote quote--medium">
+                <blockquote>
+                    <p>Photography is the story I fail to put into words.</p>
+                </blockquote>
+                <footer>
+                    <cite>Personal note</cite>
+                </footer>
+            </article>
+
+            <article class="quote quote--small">
+                <blockquote>
+                    <p>There are no rules for good photographs, only good photographs.</p>
+                </blockquote>
+                <footer>
+                    <cite>Personal note</cite>
+                </footer>
+            </article>
+
+            <article class="quote quote--large">
+                <blockquote>
+                    <p>To photograph is to hold one’s breath when all faculties converge in the act of taking a picture.</p>
+                </blockquote>
+                <footer>
+                    <cite>Personal note</cite>
+                </footer>
+            </article>
+
+            <article class="quote quote--medium">
+                <blockquote>
+                    <p>When words become unclear, I shall focus with photographs.</p>
+                </blockquote>
+                <footer>
+                    <cite>Ansel Adams</cite>
+                </footer>
+            </article>
+
+            <article class="quote quote--small">
+                <blockquote>
+                    <p>The best photographs are often the ones you almost missed.</p>
+                </blockquote>
+                <footer>
+                    <cite>Personal note</cite>
+                </footer>
+            </article>
+
+            <article class="quote quote--small">
+                <blockquote>
+                    <p>A photograph remembers the light after the moment has passed.</p>
+                </blockquote>
+                <footer>
+                    <cite>Personal note</cite>
+                </footer>
+            </article>
+
+            <article class="quote quote--medium">
+                <blockquote>
+                    <p>Love is not idealization. Every true moment is a little more honest than language can hold.</p>
+                </blockquote>
+                <footer>
+                    <cite>Personal note</cite>
+                </footer>
+            </article>
+
+            <article class="quote quote--large">
+                <blockquote>
+                    <p>The best camera is the one that helps you pay attention.</p>
+                </blockquote>
+                <footer>
+                    <cite>Personal note</cite>
+                </footer>
+            </article>
+
+            <article class="quote quote--small">
+                <blockquote>
+                    <p>Good photographs begin with curiosity.</p>
+                </blockquote>
+                <footer>
+                    <cite>Personal note</cite>
+                </footer>
+            </article>
+
+            <article class="quote quote--medium">
+                <blockquote>
+                    <p>Every frame is a decision about what matters.</p>
+                </blockquote>
+                <footer>
+                    <cite>Personal note</cite>
+                </footer>
+            </article>
+        </div>
+    </main>
+
+    <footer id="site-footer"></footer>
+
+    <script src="nav.js"></script>
+    <script>
+        const featuredQuotes = [
+            ["The world is full of magic things, patiently waiting for our wits to grow sharper.", "Bertrand Russell"],
+            ["A camera is a save button for the eyes.", "Personal note"],
+            ["Photography is the story I fail to put into words.", "Personal note"],
+            ["There are no rules for good photographs, only good photographs.", "Personal note"],
+            ["To photograph is to hold one's breath when all faculties converge in the act of taking a picture.", "Personal note"],
+            ["When words become unclear, I shall focus with photographs.", "Ansel Adams"],
+            ["The best photographs are often the ones you almost missed.", "Personal note"],
+            ["A photograph remembers the light after the moment has passed.", "Personal note"],
+            ["Love is not idealization. Every true moment is a little more honest than language can hold.", "Personal note"],
+            ["The best camera is the one that helps you pay attention.", "Personal note"],
+            ["Good photographs begin with curiosity.", "Personal note"],
+            ["Every frame is a decision about what matters.", "Personal note"]
+        ];
+
+        const featuredQuote = document.getElementById('featured-quote');
+        const featuredAuthor = document.getElementById('featured-author');
+        const nextQuote = document.getElementById('next-quote');
+        let currentQuote = -1;
+
+        function showRandomQuote() {
+            let nextIndex = Math.floor(Math.random() * featuredQuotes.length);
+            while (featuredQuotes.length > 1 && nextIndex === currentQuote) {
+                nextIndex = Math.floor(Math.random() * featuredQuotes.length);
+            }
+            currentQuote = nextIndex;
+            const [text, author] = featuredQuotes[currentQuote];
+            featuredQuote.parentElement.classList.remove('is-changing');
+            void featuredQuote.offsetWidth;
+            featuredQuote.textContent = text;
+            featuredAuthor.textContent = author;
+            featuredQuote.parentElement.classList.add('is-changing');
+        }
+
+        nextQuote.addEventListener('click', showRandomQuote);
+        showRandomQuote();
+    </script>
+</body>
+</html>

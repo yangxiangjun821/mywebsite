@@ -1,0 +1,84 @@
+.machine-page {
+    padding-top: 3rem;
+    text-align: center;
+}
+
+.machine {
+    max-width: 600px;
+    margin: 2rem auto;
+}
+
+.machine-view {
+    position: relative;
+    aspect-ratio: 3 / 2;
+    overflow: hidden;
+    background: var(--primary-deep);
+    border-radius: 16px;
+}
+
+.machine-photo {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    object-fit: cover;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    opacity: 0;
+    transition: opacity 450ms ease-out;
+}
+
+.machine-empty {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    color: white;
+    transition: opacity 450ms ease-out;
+}
+
+.machine[data-state="captured"] .machine-photo {
+    opacity: 1;
+}
+
+.machine[data-state="captured"] .machine-empty,
+.machine[data-state="forgetting"] .machine-empty {
+    opacity: 0;
+}
+
+#machine-status {
+    min-height: 3.4em;
+    margin: 1.2rem 0;
+}
+
+#shutter {
+    padding: 0.9rem 1.5rem;
+    color: white;
+    background: var(--primary);
+    border: 0;
+    border-radius: 999px;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+    touch-action: manipulation;
+}
+
+#shutter:hover {
+    background: var(--primary-deep);
+}
+
+#shutter:focus-visible {
+    outline: 3px solid var(--primary);
+    outline-offset: 5px;
+}
+
+#shutter[aria-disabled="true"] {
+    cursor: wait;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .machine-photo,
+    .machine-empty {
+        transition: none;
+    }
+}

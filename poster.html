@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frame &amp; Feeling — Poster sketch</title>
+    <style>
+        * { box-sizing: border-box; }
+        body { margin: 0; background: #fff7f3; font-family: "Segoe UI", Arial, sans-serif; }
+        .poster {
+            width: 1200px;
+            height: 630px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 100px 120px;
+            color: #fff7f3;
+            background: #4a263c;
+            position: relative;
+        }
+        .poster::before {
+            content: "";
+            position: absolute;
+            inset: 64px;
+            border: 3px solid #e99a83;
+            pointer-events: none;
+        }
+        h1 { max-width: 850px; margin: 0 0 28px; font-size: 90px; line-height: 1.08; }
+        p { max-width: 850px; margin: 0; color: #f6dce0; font-size: 30px; line-height: 1.5; }
+    </style>
+</head>
+<body>
+    <main class="poster">
+        <h1>Frame &amp; Feeling</h1>
+        <p>A photography journal for beginners to preserve the places, settings, and feelings behind their images.</p>
+    </main>
+</body>
+</html>
