@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A beginner-friendly field guide to endangered animals, their habitats, and the threats they face.">
+    <title>Animal Field Guide · Vanishing Wild</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon-32.png" sizes="32x32">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+</head>
+<body>
+    <header id="site-header"></header>
+
+    <main>
+        <section class="page-intro" aria-labelledby="guide-title">
+            <h1 id="guide-title">Animals at the edge</h1>
+            <p>Twenty remarkable species, each chosen for a feature that makes it impossible to confuse with any other animal.</p>
+        </section>
+
+        <section aria-labelledby="profiles-title">
+            <div class="section-heading">
+                <div><h2 id="profiles-title">Field guide</h2><p>Choose a habitat to narrow the collection.</p></div>
+                <div class="filters" role="group" aria-label="Filter animals by habitat">
+                    <button class="filter is-active" type="button" data-filter="all" aria-pressed="true">All</button>
+                    <button class="filter" type="button" data-filter="forest" aria-pressed="false">Forest</button>
+                    <button class="filter" type="button" data-filter="ocean" aria-pressed="false">Ocean</button>
+                    <button class="filter" type="button" data-filter="freshwater" aria-pressed="false">Freshwater</button>
+                    <button class="filter" type="button" data-filter="island" aria-pressed="false">Island</button>
+                    <button class="filter" type="button" data-filter="grassland" aria-pressed="false">Grassland</button>
+                </div>
+            </div>
+
+            <div class="animal-list" id="animal-list">
+                <article class="animal-profile" data-habitat="forest">
+                    <div class="animal-profile__identity"><span class="specimen-number">01 · Forest</span><p class="status status--critical">Critically endangered</p><h3>Saola</h3><p class="scientific-name">Pseudoryx nghetinhensis</p></div>
+                    <div class="animal-profile__body"><p class="animal-profile__feature"><strong>Signature:</strong> Two long, almost parallel horns earned it the nickname “Asian unicorn.”</p><p><strong>Range:</strong> Annamite Mountains of Laos and Vietnam.</p><p><strong>Why at risk:</strong> Wire snares and forest loss threaten an animal so elusive that scientists rarely see it alive.</p></div>
+                </article>
+                <article class="animal-profile" data-habitat="forest">
+                    <div class="animal-profile__identity"><span class="specimen-number">02 · Forest</span><p class="status status--endangered">Endangered</p><h3>Okapi</h3><p class="scientific-name">Okapia johnstoni</p></div>
+                    <div class="animal-profile__body"><p class="animal-profile__feature"><strong>Signature:</strong> A giraffe relative with a velvet-brown body and zebra-striped legs.</p><p><strong>Range:</strong> Dense rainforests of the Democratic Republic of the Congo.</p><p><strong>Why at risk:</strong> Mining, hunting, armed conflict, and forest loss continue to fragment its home.</p></div>
+                </article>
+                <article class="animal-profile" data-habitat="forest">
+                    <div class="animal-profile__identity"><span class="specimen-number">03 · Forest</span><p class="status status--endangered">Endangered</p><h3>Aye-aye</h3><p class="scientific-name">Daubentonia madagascariensis</p></div>
+                    <div class="animal-profile__body"><p class="animal-profile__feature"><strong>Signature:</strong> It taps wood and uses an extraordinarily thin middle finger to hook out grubs.</p><p><strong>Range:</strong> Forests of Madagascar.</p><p><strong>Why at risk:</strong> Deforestation, hunting, and persecution linked to local superstition.</p></div>
+                </article>
+                <article class="animal-profile" data-habitat="forest">
+                    <div class="animal-profile__identity"><span class="specimen-number">04 · Forest</span><p class="status status--endangered">Endangered</p><h3>Proboscis monkey</h3><p class="scientific-name">Nasalis larvatus</p></div>
+                    <div class="animal-profile__body"><p class="animal-profile__feature"><strong>Signature:</strong> Adult males have a pendulous nose that amplifies their calls.</p><p><strong>Range:</strong> Riverside and mangrove forests of Borneo.</p><p><strong>Why at risk:</strong> Wetland clearing, fires, hunting, and increasingly isolated habitat.</p></div>
+                </article>
+                <article class="animal-profile" data-habitat="grassland">
+                    <div class="animal-profile__identity"><span class="specimen-number">05 · Grassland</span><p class="status status--critical">Critically endangered</p><h3>Hirola</h3><p class="scientific-name">Beatragus hunteri</p></div>
+                    <div class="animal-profile__body"><p class="animal-profile__feature"><strong>Signature:</strong> White markings between its eyes make this antelope look permanently bespectacled.</p><p><strong>Range:</strong> A small area along the Kenya–Somalia border.</p><p><strong>Why at risk:</strong> Habitat degradation, drought, disease, and a tiny surviving population.</p></div>
+                </article>
+                <article class="animal-profile" data-habitat="forest island">
+                    <div class="animal-profile__identity"><span class="specimen-number">06 · Island forest</span><p class="status status--critical">Critically endangered</p><h3>Pygmy three-toed sloth</h3><p class="scientific-name">Bradypus pygmaeus</p></div>
+                    <div class="animal-profile__body"><p class="animal-profile__feature"><strong>Signature:</strong> The world’s smallest sloth often swims between red mangroves.</p><p><strong>Range:</strong> Escudo de Veraguas, a single Caribbean island off Panama.</p><p><strong>Why at risk:</strong> Its entire world is one tiny island with vulnerable mangrove habitat.</p></div>
+                </article>
+                <article class="animal-profile" data-habitat="forest">
+                    <div class="animal-profile__identity"><span class="specimen-number">07 · Forest</span><p class="status status--critical">Critically endangered</p><h3>Sunda pangolin</h3><p class="scientific-name">Manis javanica</p></div>
+                    <div class="animal-profile__body"><p class="animal-profile__feature"><strong>Signature:</strong> Overlapping scales form natural armour, and it rolls into a near-perfect ball.</p><p><strong>Range:</strong> Forests and wetlands across Southeast Asia.</p><p><strong>Why at risk:</strong> Intensive illegal trafficking for scales and meat.</p></div>
+                </article>
+                <article class="animal-profile" data-habitat="freshwater">
+                    <div class="animal-profile__identity"><span class="specimen-number">08 · Freshwater</span><p class="status status--critical">Critically endangered</p><h3>Axolotl</h3><p class="scientific-name">Ambystoma mexicanum</p></div>
+                    <div class="animal-profile__body"><p class="animal-profile__feature"><strong>Signature:</strong> It keeps feathery larval gills for life and can regenerate limbs and parts of organs.</p><p><strong>Range:</strong> The surviving canals of Xochimilco, Mexico City.</p><p><strong>Why at risk:</strong> Polluted, fragmented waterways and invasive fish.</p></div>
+                </article>
+                <article class="animal-profile" data-habitat="freshwater">
+                    <div class="animal-profile__identity"><span class="specimen-number">09 · Freshwater</span><p class="status status--critical">Critically endangered</p><h3>Gharial</h3><p class="scientific-name">Gavialis gangeticus</p></div>
+                    <div class="animal-profile__body"><p class="animal-profile__feature"><strong>Signature:</strong> A needle-thin snout catches fish; mature males grow a bulbous tip called a ghara.</p><p><strong>Range:</strong> Large rivers of northern India and Nepal.</p><p><strong>Why at risk:</strong> Dams, sand mining, depleted fish, and entanglement in nets.</p></div>
+                </article>
+                <article class="animal-profile" data-habitat="ocean">
+                    <div class="animal-profile__identity"><span class="specimen-number">10 · Ocean</span><p class="status status--critical">Critically endangered</p><h3>Hawksbill turtle</h3><p class="scientific-name">Eretmochelys imbricata</p></div>
+                    <div class="animal-profile__body"><p class="animal-profile__feature"><strong>Signature:</strong> A sharp birdlike beak and overlapping amber-patterned shell plates.</p><p><strong>Range:</strong> Tropical coral reefs around the world.</p><p><strong>Why at risk:</strong> Shell trade, bycatch, lost nesting beaches, and declining reefs.</p></div>
+                </article>
+                <article class="animal-profile" data-habitat="forest island">
+                    <div class="animal-profile__identity"><span class="specimen-number">11 · Island forest</span><p class="status status--critical">Critically endangered</p><h3>Kākāpō</h3><p class="scientific-name">Strigops habroptilus</p></div>
+                    <div class="animal-profile__body"><p class="animal-profile__feature"><strong>Signature:</strong> A moss-green, owl-faced parrot that is nocturnal, heavy, and unable to fly.</p><p><strong>Range:</strong> Predator-free sanctuary islands in New Zealand.</p><p><strong>Why at risk:</strong> Introduced predators, low fertility, disease, and very low numbers.</p></div>
+                </article>
+                <article class="animal-profile" data-habitat="forest">
+                    <div class="animal-profile__identity"><span class="specimen-number">12 · Forest</span><p class="status status--critical">Critically endangered</p><h3>Helmeted hornbill</h3><p class="scientific-name">Rhinoplax vigil</p></div>
+                    <div class="animal-profile__body"><p class="animal-profile__feature"><strong>Signature:</strong> Its solid red casque is used in dramatic mid-air contests between males.</p><p><strong>Range:</strong> Lowland forests of Southeast Asia.</p><p><strong>Why at risk:</strong> Poaching for the casque—sold as “red ivory”—and forest clearance.</p></div>
+                </article>
+                <article class="animal-profile" data-habitat="forest island">
+                    <div class="animal-profile__identity"><span class="specimen-number">13 · Island forest</span><p class="status status--critical">Critically endangered</p><h3>Philippine eagle</h3><p class="scientific-name">Pithecophaga jefferyi</p></div>
+                    <div class="animal-profile__body"><p class="animal-profile__feature"><strong>Signature:</strong> A shaggy crown, deep bill, and wings broad enough to thread through rainforest.</p><p><strong>Range:</strong> Four Philippine islands, principally Mindanao.</p><p><strong>Why at risk:</strong> Forest loss, shooting, and extremely slow breeding.</p></div>
+                </article>
+                <article class="animal-profile" data-habitat="ocean">
+                    <div class="animal-profile__identity"><span class="specimen-number">14 · Coast</span><p class="status status--critical">Critically endangered</p><h3>African penguin</h3><p class="scientific-name">Spheniscus demersus</p></div>
+                    <div class="animal-profile__body"><p class="animal-profile__feature"><strong>Signature:</strong> Its loud braying call inspired the nickname “jackass penguin.”</p><p><strong>Range:</strong> Coastal islands and shores of South Africa and Namibia.</p><p><strong>Why at risk:</strong> Scarce prey, shifting fish stocks, oil pollution, and disturbance.</p></div>
+                </article>
+                <article class="animal-profile" data-habitat="ocean">
+                    <div class="animal-profile__identity"><span class="specimen-number">15 · Ocean</span><p class="status status--critical">Critically endangered</p><h3>Vaquita</h3><p class="scientific-name">Phocoena sinus</p></div>
+                    <div class="animal-profile__body"><p class="animal-profile__feature"><strong>Signature:</strong> The smallest cetacean has dark rings around its eyes and mouth.</p><p><strong>Range:</strong> Only the northern Gulf of California, Mexico.</p><p><strong>Why at risk:</strong> Entanglement in illegal gillnets set for totoaba fish.</p></div>
+                </article>
+                <article class="animal-profile" data-habitat="ocean">
+                    <div class="animal-profile__identity"><span class="specimen-number">16 · Ocean</span><p class="status status--endangered">Endangered</p><h3>Whale shark</h3><p class="scientific-name">Rhincodon typus</p></div>
+                    <div class="animal-profile__body"><p class="animal-profile__feature"><strong>Signature:</strong> The world’s largest fish carries a unique constellation of white spots.</p><p><strong>Range:</strong> Warm oceans across the globe.</p><p><strong>Why at risk:</strong> Targeted fishing, bycatch, vessel strikes, and marine pollution.</p></div>
+                </article>
+                <article class="animal-profile" data-habitat="ocean freshwater">
+                    <div class="animal-profile__identity"><span class="specimen-number">17 · Coasts & rivers</span><p class="status status--critical">Critically endangered</p><h3>Largetooth sawfish</h3><p class="scientific-name">Pristis pristis</p></div>
+                    <div class="animal-profile__body"><p class="animal-profile__feature"><strong>Signature:</strong> A long, toothed rostrum works like a living metal detector and slashing blade.</p><p><strong>Range:</strong> Tropical coasts, estuaries, and rivers.</p><p><strong>Why at risk:</strong> Its saw tangles easily in fishing gear; nursery habitat is disappearing.</p></div>
+                </article>
+                <article class="animal-profile" data-habitat="ocean">
+                    <div class="animal-profile__identity"><span class="specimen-number">18 · Ocean</span><p class="status status--endangered">Endangered</p><h3>Giant oceanic manta ray</h3><p class="scientific-name">Mobula birostris</p></div>
+                    <div class="animal-profile__body"><p class="animal-profile__feature"><strong>Signature:</strong> Winglike fins span several metres, yet this giant feeds on tiny plankton.</p><p><strong>Range:</strong> Tropical and temperate oceans worldwide.</p><p><strong>Why at risk:</strong> Bycatch and targeted fishing for gill plates.</p></div>
+                </article>
+                <article class="animal-profile" data-habitat="freshwater ocean">
+                    <div class="animal-profile__identity"><span class="specimen-number">19 · Rivers to ocean</span><p class="status status--critical">Critically endangered</p><h3>European eel</h3><p class="scientific-name">Anguilla anguilla</p></div>
+                    <div class="animal-profile__body"><p class="animal-profile__feature"><strong>Signature:</strong> It crosses the Atlantic to breed, while its transparent young return toward Europe.</p><p><strong>Range:</strong> European and North African waters, migrating to the Sargasso Sea.</p><p><strong>Why at risk:</strong> Dams, fishing, pollution, parasites, and changing ocean conditions.</p></div>
+                </article>
+                <article class="animal-profile" data-habitat="forest freshwater">
+                    <div class="animal-profile__identity"><span class="specimen-number">20 · Rainforest</span><p class="status status--endangered">Endangered</p><h3>Golden poison frog</h3><p class="scientific-name">Phyllobates terribilis</p></div>
+                    <div class="animal-profile__body"><p class="animal-profile__feature"><strong>Signature:</strong> Brilliant yellow skin advertises one of the most powerful toxins found in an animal.</p><p><strong>Range:</strong> A small area of humid rainforest in western Colombia.</p><p><strong>Why at risk:</strong> A tiny range exposed to forest loss, pollution, and illegal collection.</p></div>
+                </article>
+            </div>
+            <p class="filter-status" id="filter-status" role="status">Showing all 20 animals.</p>
+        </section>
+
+        <section class="coursework-plan" aria-labelledby="ideas-title">
+            <h2 id="ideas-title">Five project directions</h2>
+            <dl class="project-details">
+                <dt>Endangered Animal Field Guide</dt><dd>For students discovering threatened wildlife for the first time.</dd>
+                <dt>Wildlife Trade Explainer</dt><dd>For readers who want to understand how illegal trade affects species.</dd>
+                <dt>Habitat Corridor Map</dt><dd>For learners exploring why connected landscapes matter.</dd>
+                <dt>Responsible Wildlife Tourism Guide</dt><dd>For travellers who want to avoid harming animals.</dd>
+                <dt>Local Species Watch</dt><dd>For communities recording and protecting nearby wildlife.</dd>
+            </dl>
+            <h2>My favourite: Endangered Animal Field Guide</h2>
+            <p>Vanishing Wild is for students and curious readers. Its core pages are Home, Animals, Quotes, and About. The animal guide is the page that must work best, so filtering and clear profiles come first.</p>
+            <p><a href="poster.html">View the 1200 × 630 poster sketch</a></p>
+        </section>
+    </main>
+
+    <footer id="site-footer"></footer>
+
+    <script src="nav.js"></script>
+    <script src="animals.js"></script>
+</body>
+</html>

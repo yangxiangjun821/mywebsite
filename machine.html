@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The Paper Sanctuary: an interactive reminder that endangered animals need protected habitats, not promises.">
+    <title>The Paper Sanctuary · Vanishing Wild</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="machine.css">
+    <link rel="icon" href="favicon-32.png" sizes="32x32">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+</head>
+<body>
+    <header id="site-header"></header>
+
+    <main class="machine-page">
+        <header class="machine-intro">
+            <h1>The Paper Sanctuary</h1>
+            <p>Can one sign protect an endangered animal?</p>
+        </header>
+
+        <section id="machine" class="machine" data-state="ready" aria-labelledby="machine-title">
+            <h2 id="machine-title" class="visually-hidden">Interactive animal protection machine</h2>
+
+            <div class="machine-stage" aria-hidden="true">
+                <img class="machine-photo" src="images/asian-elephant.jpg" alt="">
+                <div class="machine-shade"></div>
+
+                <div class="protection-sign">
+                    <span class="protection-sign__label">Protected</span>
+                    <span class="protection-sign__sub">Wildlife sanctuary</span>
+                    <span class="protection-sign__post"></span>
+                </div>
+
+                <p class="animal-message">I need a habitat,<br>not a sign.</p>
+            </div>
+
+            <div class="machine-controls">
+                <p id="machine-status" role="status" aria-live="polite">The animal is waiting for real protection.</p>
+                <button id="protect-button" type="button">Protect this animal</button>
+            </div>
+        </section>
+
+        <p class="machine-meaning">A protected name means little without protected land.</p>
+        <noscript><p>This machine needs JavaScript to move the sanctuary sign.</p></noscript>
+    </main>
+
+    <footer id="site-footer"></footer>
+    <script src="nav.js"></script>
+    <script src="machine.js"></script>
+</body>
+</html>
