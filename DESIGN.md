@@ -18,4 +18,4 @@ Content uses a broad 1120px reading frame. The homepage begins with a photograph
 
 ## Interaction
 
-Motion is brief and functional. Controls have visible keyboard focus. Habitat filtering is the primary interaction; The Paper Sanctuary is the playful exercise. Its protection sign is rejected before the machine returns to its original state.
+Motion is brief and functional. Controls have visible keyboard focus. Habitat filtering is the primary interaction.

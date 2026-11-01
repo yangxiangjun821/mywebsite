@@ -25,8 +25,8 @@ load('nav.html', 'site-header', `
         <ul class="links">
             <li><a href="index.html">Home</a></li>
             <li><a href="project.html">Animals</a></li>
+            <li><a href="habitats.html">Habitats</a></li>
             <li><a href="quotes.html">Quotes</a></li>
-            <li><a href="machine.html">Paper Sanctuary</a></li>
             <li><a href="about.html">About</a></li>
         </ul>
         <a class="action" href="about.html#contact">Contact</a>

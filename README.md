@@ -4,13 +4,13 @@ Open index.html with VS Code Live Server so the shared navigation and footer can
 
 ## Coursework
 
-The site introduces endangered animals, their habitats, and conservation pressures. project.html contains an interactive animal field guide plus five project ideas and their audiences. machine.html is the habitat-themed useless-machine exercise. poster.html is a 1200 × 630 poster sketch.
+The site introduces endangered animals, their habitats, and conservation pressures. project.html contains an interactive animal field guide plus five project ideas and their audiences. poster.html is a 1200 × 630 poster sketch.
 
-## Explain the machine
+## Habitat interaction
 
-The loop is present → vanishing → returning → present. One native button supports mouse, touch, Enter, and Space. The state guard ignores presses during a cycle, preventing overlapping timers. The habitat fades, the machine refuses the loss, and the original state returns. Nothing is saved or scored. Reduced-motion preferences remove the fade.
+The Habitats navigation link opens habitats.html. Choose Forest, Ocean, Freshwater, Island, or Grassland, then drag the Environment change slider to blend continuously between intact and degraded views. Arrow keys, Home and End work on the focused slider; Restore intact view resets it. Choosing another environment starts at the intact view.
 
-machine.js comments explain the code. data-state connects state to CSS. aria-disabled communicates that the button is busy without removing keyboard focus. role=status announces messages.
+Each images/habitats PNG contains two vertically stacked panels. habitats.css displays the upper and lower panels in matching layers; habitats.js changes the pressure layer opacity on every input event. The five scenes map to real environmental pressures: deforestation and stream pollution, ocean warming and marine pollution, drought and reduced river flow, coastal erosion, and overgrazing with soil erosion. Images load on demand, with a retry action and protection against stale loads during fast environment changes. Generated scenes are illustrative rather than measured environmental data; exact prompts are recorded in images/habitats/PROVENANCE.md.
 
 ## Poster and publication
 
